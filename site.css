@@ -1,0 +1,38 @@
+/* Shared behavior for the published pages; the original design stays inline. */
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; }
+.responsive-grid > * { min-width: 0; }
+a { overflow-wrap: anywhere; }
+a:focus-visible, summary:focus-visible {
+  outline: 2px solid #24717a;
+  outline-offset: 4px;
+}
+.previous-talks > summary {
+  width: fit-content;
+  margin: 0 0 24px 30px;
+  padding: 7px 13px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  letter-spacing: .03em;
+  color: #24616a;
+  background: #fff;
+  border: 1px solid #d6d0c6;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.previous-talks > summary:hover { border-color: #a8a29a; }
+.previous-talks .when-open { display: none; }
+.previous-talks[open] .when-closed { display: none; }
+.previous-talks[open] .when-open { display: inline; }
+@media (max-width: 720px) {
+  .page-container { padding-left: 20px !important; padding-right: 20px !important; }
+  .responsive-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .hero-grid { gap: 32px !important; padding-top: 40px !important; }
+  .hero-grid h1 { font-size: clamp(2rem, 8vw, 3.25rem) !important; }
+  .hero-grid img { max-width: 320px; }
+  .publication-row { gap: 16px !important; }
+  .site-nav { position: static !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+}

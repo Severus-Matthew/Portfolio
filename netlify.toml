@@ -1,0 +1,5 @@
+# This is a static site: no dependency installation or compilation is needed.
+[build]
+  base = "."
+  command = ""
+  publish = "."

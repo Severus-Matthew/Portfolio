@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manvi Jha | Academic Portfolio</title>
+<meta name="description" content="Manvi Jha, Ph.D. candidate in Electrical and Computer Engineering at UIUC. Research, publications, projects, talks, and academic experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #faf8f5; color: #17161a; -webkit-font-smoothing: antialiased; }
+  a { color: oklch(0.44 0.08 205); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: oklch(0.33 0.07 205); }
+  html { scroll-behavior: smooth; }
+</style>
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<div style="font-family:'IBM Plex Sans',Helvetica,sans-serif; font-size:16px; line-height:1.6">
+
+  <!-- NAV -->
+  <div class="site-nav" style="position:sticky; top:0; z-index:50; background:rgba(250,248,245,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #e2ddd4">
+    <div class="page-container" style="max-width:1080px; margin:0 auto; padding:12px 28px; box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap">
+      <a href="#top" style="font-family:'Newsreader',Georgia,serif; font-size:19px; font-weight:500; color:#17161a; text-decoration:none; letter-spacing:-0.01em">Manvi Jha</a>
+      <div style="display:flex; gap:20px; flex-wrap:wrap; font-size:13.5px">
+        <a href="#education" style="color:#4a463f; text-decoration:none">Education</a>
+        <a href="#research" style="color:#4a463f; text-decoration:none">Experience</a>
+        <a href="#publications" style="color:#4a463f; text-decoration:none">Publications</a>
+        <a href="#projects" style="color:#4a463f; text-decoration:none">Projects</a>
+        <a href="#talks" style="color:#4a463f; text-decoration:none">Talks</a>
+        <a href="#awards" style="color:#4a463f; text-decoration:none">Awards</a>
+        <a href="/project-archive.html" style="color:#4a463f; text-decoration:none">Archive</a>
+        <a href="/uploads/cv.pdf" target="_blank" rel="noreferrer" style="color:oklch(0.44 0.08 205); text-decoration:none; font-weight:500">CV ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-container" id="top" style="max-width:1080px; margin:0 auto; padding:0 28px 110px; box-sizing:border-box">
+
+    <!-- HERO -->
+    <div class="responsive-grid hero-grid" style="display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:44px; align-items:start; padding:76px 0 64px">
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.44 0.08 205)">PH.D. CANDIDATE · ELECTRICAL &amp; COMPUTER ENGINEERING · UIUC</div>
+        <h1 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:52px; font-weight:400; line-height:1.08; letter-spacing:-0.02em">AI for verified computing systems</h1>
+        <p style="margin:0; max-width:56ch; font-size:17.5px; line-height:1.62; color:#3d3a34; text-wrap:pretty">I work on reinforcement learning and large language models for code and hardware that can be <em style="font-family: Newsreader, Georgia, serif; font-size: 19px;">proven</em> correct — prompt repair for verified Dafny, multi-agent Verilog generation, and datasets for high-level synthesis verification. Research Assistant at the ESCAD Lab, CSL, ECE, UIUC.&nbsp;<br>PhD Advisor: <a href="https://dchen.ece.illinois.edu/">Dr. Deming Chen</a></p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; padding-top:4px">
+          <a href="mailto:manvij2@illinois.edu" style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:8px 13px; border:1px solid #d6d0c6; border-radius:2px; text-decoration:none; color:#17161a; background:#fff">manvij2@illinois.edu</a>
+          <a href="https://scholar.google.com/citations?user=QxhKiigAAAAJ" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:8px 13px; border:1px solid #d6d0c6; border-radius:2px; text-decoration:none; color:#17161a; background:#fff">Google Scholar ↗</a>
+          <a href="https://github.com/Severus-Matthew" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:8px 13px; border:1px solid #d6d0c6; border-radius:2px; text-decoration:none; color:#17161a; background:#fff">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/manvi-jha-2784711a7/" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; padding:8px 13px; border:1px solid #d6d0c6; border-radius:2px; text-decoration:none; color:#17161a; background:#fff">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px">
+        <img src="/src/Assets/me2.png" alt="Manvi Jha" style="width:100%; height:auto; display:block; border-radius:2px">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; line-height:1.75; color:#6b665d; border-top:1px solid #e2ddd4; padding-top:12px">403 Coordinated Science Lab<br>1308 W Main St<br>Urbana, IL 61801</div>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div id="education" style="padding-top:8px; scroll-margin-top:70px">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:16px; border-bottom:1px solid #e2ddd4; padding-bottom:12px; margin-bottom:40px">
+        <h2 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6b665d">Education</h2>
+      </div>
+
+
+        <div style="display:flex; flex-wrap:wrap; gap:0">
+          <div style="flex:1 1 300px; min-width:0; position:relative; border-top:1px solid #d6d0c6; padding:26px 36px 0 0; box-sizing:border-box">
+            <span style="position:absolute; left:0; top:-5.5px; width:11px; height:11px; border-radius:50%; background:oklch(0.44 0.08 205)"></span>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.44 0.08 205); letter-spacing:0.04em">2023 — 2028</div>
+            <h3 style="margin:8px 0 2px; font-family:'Newsreader',Georgia,serif; font-size:24px; font-weight:500; line-height:1.2; letter-spacing:-0.01em">Ph.D., Electrical and Computer Engineering</h3>
+            <div style="font-size:14.5px; color:#3d3a34; font-weight:500">University of Illinois Urbana-Champaign</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d; margin-top:4px">Illinois, USA · GPA 3.88 / 4.00</div>
+            <p style="margin:12px 0 0; font-size:14.5px; line-height:1.6; color:#4a463f; text-wrap:pretty">Selected graduate coursework: Statistical Learning Theory, Advanced Topics in Natural Language Processing, LLM Reasoning for Engineering, Computational Complexity.</p>
+          </div>
+          <div style="flex:1 1 300px; min-width:0; position:relative; border-top:1px solid #d6d0c6; padding:26px 0 0; box-sizing:border-box">
+            <span style="position:absolute; left:0; top:-5.5px; width:11px; height:11px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b665d; letter-spacing:0.04em">2019 — 2023</div>
+            <h3 style="margin:8px 0 2px; font-family:'Newsreader',Georgia,serif; font-size:24px; font-weight:500; line-height:1.2; letter-spacing:-0.01em">B.Tech., Electronics and Communication Engineering</h3>
+            <div style="font-size:14.5px; color:#3d3a34; font-weight:500">National Institute of Technology Patna</div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d; margin-top:4px">Bihar, India · CGPA 8.88 / 10</div>
+            <p style="margin:12px 0 0; font-size:14.5px; line-height:1.6; color:#4a463f; text-wrap:pretty">Undergraduate research in image restoration and IoT, alongside IEEE student-branch and developer-community leadership.</p>
+          </div>
+        </div>
+
+
+
+      <p style="margin:26px 0 0; font-size:14.5px"><a href="/certificates.html">Courses, workshops and certificates →</a></p>
+    </div>
+
+    <!-- RESEARCH & EXPERIENCE -->
+    <div id="research" style="padding-top:88px; scroll-margin-top:70px">
+      <div style="border-bottom:1px solid #e2ddd4; padding-bottom:12px; margin-bottom:40px">
+        <h2 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6b665d">Research &amp; Professional Experience</h2>
+      </div>
+      <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr); gap:0; max-width:760px">
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 34px 30px">
+          <span style="position:absolute; left:-5.5px; top:6px; width:11px; height:11px; border-radius:50%; background:oklch(0.44 0.08 205)"></span>
+          <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.44 0.08 205)">Aug 2023 — present</div>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#fff; background:oklch(0.44 0.08 205); padding:2px 6px; border-radius:2px">current</span>
+          </div>
+          <h3 style="margin:7px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:23px; font-weight:500; letter-spacing:-0.01em">Research Assistant — ESCAD Lab, CSL, ECE, UIUC</h3>
+          <p style="margin:8px 0 0; font-size:15px; line-height:1.6; color:#4a463f; text-wrap:pretty">Reinforcement learning and LLM pipelines for verified code and hardware generation: prompt repair against the Dafny verifier, multi-agent Verilog design, and dataset construction for HLS functional verification.</p>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 34px 30px">
+          <span style="position:absolute; left:-5.5px; top:6px; width:11px; height:11px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b665d">May 2026 — Aug 2026</div>
+          <h3 style="margin:7px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:23px; font-weight:500; letter-spacing:-0.01em">Applied Scientist Intern — Amazon</h3>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 34px 30px">
+          <span style="position:absolute; left:-5.5px; top:6px; width:11px; height:11px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b665d">Fall 2024 · Spring 2026</div>
+          </div>
+          <h3 style="margin:7px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:23px; font-weight:500; letter-spacing:-0.01em">Teaching Assistant — ECE 445: Senior Design, UIUC</h3>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 34px 30px">
+          <span style="position:absolute; left:-5.5px; top:6px; width:11px; height:11px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b665d">May 2025 — Aug 2025</div>
+          <h3 style="margin:7px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:23px; font-weight:500; letter-spacing:-0.01em">Development Engineering Intern, R&amp;D — Foxconn Interconnect Technology</h3>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 34px 30px">
+          <span style="position:absolute; left:-5.5px; top:6px; width:11px; height:11px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b665d">Jan 2023 — May 2023</div>
+          <h3 style="margin:7px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:23px; font-weight:500; letter-spacing:-0.01em">Intern Tech II, R&amp;D — Keysight Technologies, India</h3>
+          <p style="margin:8px 0 0; font-size:15px; line-height:1.6; color:#4a463f; text-wrap:pretty">PDK development team: built and deployed a DRC automation tool.</p>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 34px 30px">
+          <span style="position:absolute; left:-5.5px; top:6px; width:11px; height:11px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b665d">May 2022 — Jul 2022</div>
+          <h3 style="margin:7px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:23px; font-weight:500; letter-spacing:-0.01em">Student Trainee — Centre for AI &amp; Robotics (CAIR), DRDO</h3>
+          <p style="margin:8px 0 0; font-size:15px; line-height:1.6; color:#4a463f; text-wrap:pretty">Road segmentation for autonomous robot navigation under the STAR programme.</p>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 4px 30px">
+          <span style="position:absolute; left:-5.5px; top:6px; width:11px; height:11px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b665d">Oct 2020 — Oct 2022</div>
+          <h3 style="margin:7px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:23px; font-weight:500; letter-spacing:-0.01em">Undergraduate Research Assistant — NIT Patna</h3>
+          <p style="margin:8px 0 0; font-size:15px; line-height:1.6; color:#4a463f; text-wrap:pretty">Image processing and deep learning with Prof. Ashish Kumar Bhandari — four journal papers and one conference paper.</p>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 4px 30px">
+          <span style="position:absolute; left:-5.5px; top:6px; width:11px; height:11px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b665d">Jun 2020 — Jul 2020</div>
+          <h3 style="margin:7px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:23px; font-weight:500; letter-spacing:-0.01em">Front-end Web Development Intern — SatyendraNathBose Technologies</h3>
+          <p style="margin:8px 0 0; font-size:15px; line-height:1.6; color:#4a463f; text-wrap:pretty">Built company project sites on the MERN stack and WordPress.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PUBLICATIONS -->
+    <div id="publications" style="padding-top:88px; scroll-margin-top:70px">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:16px; border-bottom:1px solid #e2ddd4; padding-bottom:12px; margin-bottom:36px">
+        <h2 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6b665d">Publications</h2>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#8a857c">11 entries · 2021 — 2025</span>
+      </div>
+
+      <div style="display:flex; flex-direction:column">
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>Proof2Silicon</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2025</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">arXiv</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">Proof2Silicon: Prompt Repair for Verified Code and Hardware Generation via Reinforcement Learning</h3>
+            <div style="font-size:14px; color:#4a463f"><strong style="font-weight:600; color:#17161a">M. Jha</strong>, L. J. Wan, D. Chen</div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">An end-to-end synthesis framework that embeds the PREFACE flow: the verifier-driven RL agent optimises prompts until the Dafny is correct, then verified programs are translated to synthesisable HLS. Reaches up to 72% end-to-end hardware synthesis success through Vivado HLS. Presented at SRC TECHCON 2025.</p>
+            <div style="padding-top:2px"><a href="https://arxiv.org/abs/2509.06239" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">arXiv:2509.06239 ↗</a></div>
+          </div>
+        </div>
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>PREFACE</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2025</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">GLSVLSI · invited</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">PREFACE: A Reinforcement Learning Framework for Code Verification via LLM Prompt Repair</h3>
+            <div style="font-size:14px; color:#4a463f"><strong style="font-weight:600; color:#17161a">M. Jha</strong>, L. J. Wan, D. Chen</div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">A model-agnostic framework in which a small language model is trained with RL to repair the prompts given to a frozen LLM, learning from the Dafny verifier's own feedback. Error-guided refinement raises verification success by up to 21% across five LLMs on a 100-task benchmark, with no fine-tuning of the generator.</p>
+            <div style="padding-top:2px"><a href="https://doi.org/10.1145/3716368.3735300" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">ACM DL ↗</a></div>
+          </div>
+        </div>
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>OpenRTLSet</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2025</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">IEEE ICLAD</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">OpenRTLSet: A Fully Open-Source Dataset for Large Language Model-based Verilog Module Design</h3>
+            <div style="font-size:14px; color:#4a463f">J. Wang, L. J. Wan, S. Pingali, S. Smith, <strong style="font-weight:600; color:#17161a">M. Jha</strong>, S. Sivakumar, X. Zhao, K. Cao, D. Chen</div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">The largest fully open-source hardware-design dataset: 131k Verilog modules drawn from GitHub (102k), VHDL translations (5k) and synthesisable C/C++ (24k), each paired with a natural-language description generated by DeepSeek-R1. Traceable origins and permissive licensing make it usable commercially.</p>
+            <div style="display:flex; gap:14px; padding-top:2px; flex-wrap:wrap"><a href="https://ieeexplore.ieee.org/document/11106163/" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">IEEE Xplore ↗</a><a href="https://github.com/UIUC-ChenLab/OpenRTLSet" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">Dataset ↗</a></div>
+          </div>
+        </div>
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>LLM acceleration</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2024</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">ACM/IEEE DAC · invited</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">New Solutions on LLM Acceleration, Optimization, and Application</h3>
+            <div style="font-size:14px; color:#4a463f">Y. Huang*, L. J. Wan*, H. Ye*, <strong style="font-weight:600; color:#17161a">M. Jha*</strong>, J. Wang*, Y. Li*, X. Zhang*, D. Chen <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8a857c">(* equal contribution)</span></div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">A survey of algorithm- and hardware-level techniques for making large language models cheaper to train, serve, and deploy. Also available as an arXiv preprint.</p>
+            <div style="padding-top:2px"><a href="https://arxiv.org/abs/2406.10903" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">arXiv:2406.10903 ↗</a></div>
+          </div>
+        </div>
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>HLS bug injection</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2024</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">IEEE LAD</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">An Iteratively-refined Dataset for High-Level Synthesis Functional Verification through LLM-Aided Bug Injection</h3>
+            <div style="font-size:14px; color:#4a463f">L. J. Wan, H. Ye, J. Wang, <strong style="font-weight:600; color:#17161a">M. Jha</strong>, D. Chen</div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">Open-source HLS code with bugs barely exists, so this work curates over 1,500 designs from public benchmark suites, each in a buggy and a bug-free version. The injection method combines in-context learning, retrieval-augmented generation and chain-of-thought, reaching an 84.8% valid single-bug injection rate.</p>
+            <div style="padding-top:2px"><a href="https://ieeexplore.ieee.org/document/10691860/" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">IEEE Xplore ↗</a></div>
+          </div>
+        </div>
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>CBLA</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2024</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">IEEE T. Instrum. Meas.</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">CBLA: Color-Balanced Locally Adjustable Underwater Image Enhancement</h3>
+            <div style="font-size:14px; color:#4a463f"><strong style="font-weight:600; color:#17161a">M. Jha</strong>, A. K. Bhandari</div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">Underwater scenes lose colour and contrast to scattering and attenuation. CBLA first restores the distorted colour in RGB space, then works in CIELAB to raise contrast and recover naturalness locally, so information survives rather than being flattened by a global correction.</p>
+            <div style="padding-top:2px"><a href="https://ieeexplore.ieee.org/document/10520329/" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">IEEE Xplore ↗</a></div>
+          </div>
+        </div>
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>NSDIE</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2024</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">ACM TOMM</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">NSDIE: Noise Suppressing Dark Image Enhancement Using Multiscale Retinex and Low-Rank Minimization</h3>
+            <div style="font-size:14px; color:#4a463f"><strong style="font-weight:600; color:#17161a">M. Jha</strong>, A. K. Bhandari</div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">A low-rank model enhances reflectance and illumination at once, so dark scenes brighten without the noise brightening with them: reflectance goes through multiscale Retinex to hold colour, illumination through a camera response model to keep the scene genuine. Shipped as a standalone app and a web portal.</p>
+            <div style="display:flex; gap:14px; padding-top:2px; flex-wrap:wrap"><a href="https://doi.org/10.1145/3638772" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">ACM DL ↗</a><a href="https://nsdie.netlify.app/" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">Project page ↗</a></div>
+          </div>
+        </div>
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>uneven illumination</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2023</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">Multimed. Tools Appl.</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">Unevenly illuminated image distortion correction using brightness perception and chromatic luminance</h3>
+            <div style="font-size:14px; color:#4a463f">M. Kumar, A. K. Bhandari, <strong style="font-weight:600; color:#17161a">M. Jha</strong></div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">A brightness transfer function derived from the Weber–Fechner law, controlled adaptively by the value and saturation channels in HSV, with image fusion for detail and a colour-contrast function based on the Helmholtz–Kohlrausch effect.</p>
+            <div style="padding-top:2px"><a href="https://link.springer.com/article/10.1007/s11042-023-16207-x" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">Springer ↗</a></div>
+          </div>
+        </div>
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>nighttime enhancement</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2022</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">IEEE T. Instrum. Meas.</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">Camera Response Based Nighttime Image Enhancement Using Concurrent Reflectance</h3>
+            <div style="font-size:14px; color:#4a463f"><strong style="font-weight:600; color:#17161a">M. Jha</strong>, A. K. Bhandari</div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">Decomposes the image by Retinex theory using a measured adaption model, then enhances illumination with a new camera response model and reflectance locally through a reconstructed histogram equalisation — avoiding both the intensity distortion and the loss of local detail that global methods bring. Designed for hardware or software deployment.</p>
+            <div style="padding-top:2px"><a href="https://ieeexplore.ieee.org/document/9750136/" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">IEEE Xplore ↗</a></div>
+          </div>
+        </div>
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>SDN + blockchain</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2022</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">IEEE TENSYMP</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">Secure SDN Based IoT Network Through Blockchain for Smart Architectures</h3>
+            <div style="font-size:14px; color:#4a463f"><strong style="font-weight:600; color:#17161a">M. Jha</strong></div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">Puts a blockchain layer under software-defined networking to authenticate IoT devices in smart-building deployments.</p>
+            <div style="padding-top:2px"><a href="https://ieeexplore.ieee.org/document/9864474/" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">IEEE Xplore ↗</a></div>
+          </div>
+        </div>
+
+        <div class="responsive-grid publication-row" style="display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:26px 0; border-bottom:1px solid #e8e3da">
+
+            <div class="responsive-grid" style="aspect-ratio:4/3; border:1px solid #e2ddd4; background-image:repeating-linear-gradient(135deg,#f2efe9 0 6px,#e9e5dd 6px 12px); display:grid; place-items:center; text-align:center; padding:8px; box-sizing:border-box">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.4; color:#8a857c">figure<br>medication IoT</span>
+            </div>
+
+          <div style="display:flex; flex-direction:column; gap:7px">
+            <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2021</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:#6b665d; border:1px solid #d6d0c6; padding:1px 5px; border-radius:2px">IEEE TENSYMP</span>
+            </div>
+            <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:22px; font-weight:500; line-height:1.25; letter-spacing:-0.01em; text-wrap:pretty">Provoking Medication Adherence With Automated IoT System</h3>
+            <div style="font-size:14px; color:#4a463f"><strong style="font-weight:600; color:#17161a">M. Jha</strong>, A. K. Bhandari</div>
+            <p style="margin:2px 0 0; font-size:15px; line-height:1.6; color:#4a463f; max-width:62ch; text-wrap:pretty">A connected dispenser and reminder loop that nudges patients toward taking medication on schedule.</p>
+            <div style="padding-top:2px"><a href="https://ieeexplore.ieee.org/abstract/document/9550893" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11.5px">IEEE Xplore ↗</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" style="padding-top:88px; scroll-margin-top:70px">
+      <div style="border-bottom:1px solid #e2ddd4; padding-bottom:12px; margin-bottom:36px">
+        <h2 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6b665d">Selected Projects</h2>
+      </div>
+      <div class="responsive-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1px; background:#e8e3da; border:1px solid #e8e3da">
+
+        <div style="background:#faf8f5; padding:26px; display:flex; flex-direction:column; gap:9px">
+          <div style="display:flex; gap:10px; align-items:baseline"><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">ongoing</span></div>
+          <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:21px; font-weight:500; line-height:1.25; text-wrap:pretty">Verification-Aware RL for Autonomous System Reliability</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a463f; text-wrap:pretty">RL agents and LLMs read telemetry to diagnose reliability faults and propose mitigations, with verification-aware reasoning keeping every proposed fix inside the system's safety constraints.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px; padding-top:4px">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">Python</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">RL</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">LLM agents</span>
+          </div>
+        </div>
+
+        <div style="background:#faf8f5; padding:26px; display:flex; flex-direction:column; gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2025</div>
+          <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:21px; font-weight:500; line-height:1.25; text-wrap:pretty">HWBuilder — Multi-Agent Modular Hardware Design</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a463f; text-wrap:pretty">A labelled dataset of 95k+ verified Verilog designs, and a multi-agent framework of fine-tuned LLMs that generates and optimises microprocessor code against it.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px; padding-top:4px">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">Verilog</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">Multi-agent LLM</span>
+          </div>
+        </div>
+
+        <div style="background:#faf8f5; padding:26px; display:flex; flex-direction:column; gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2024</div>
+          <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:21px; font-weight:500; line-height:1.25; text-wrap:pretty">LightKV — Memory-Efficient Long-Sequence Inference</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a463f; text-wrap:pretty">A KV-cache retention algorithm with static masking and information-flow strategies, aimed at the "lost in the middle" failure of autoregressive decoding.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px; padding-top:4px">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">TensorFlow</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">Cache compression</span>
+          </div>
+        </div>
+
+        <div style="background:#faf8f5; padding:26px; display:flex; flex-direction:column; gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2024</div>
+          <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:21px; font-weight:500; line-height:1.25; text-wrap:pretty">SEE — Transformer-Based Haze Removal</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a463f; text-wrap:pretty">Segments the most heavily hazed regions and dehazes them separately before ensembling, improving on prior single-image methods by up to 45%.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px; padding-top:4px">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">Transformers</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">CNNs</span>
+          </div>
+        </div>
+
+        <div style="background:#faf8f5; padding:26px; display:flex; flex-direction:column; gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2023</div>
+          <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:21px; font-weight:500; line-height:1.25; text-wrap:pretty">FPGA-Driven YOLO for Rapid Object Detection</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a463f; text-wrap:pretty">An FPGA accelerator for YOLO with cloud integration, tested on ZU702, ZCU102 and PYNQ boards.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; padding-top:4px; align-items:center">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">Vivado HLS</span>
+            <a href="https://github.com/Severus-Matthew/ECE527Project" target="_blank" rel="noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:11px">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div style="background:#faf8f5; padding:26px; display:flex; flex-direction:column; gap:9px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2022</div>
+          <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:21px; font-weight:500; line-height:1.25; text-wrap:pretty">Road Segmentation for Robot Navigation</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a463f; text-wrap:pretty">Built at DRDO under the STAR programme: YOLOP and SNE-RoadSeg with grab-cut refinement, evaluated on KITTI, CAIR DRDO and ATR Chitradurga data.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px; padding-top:4px">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">Deep learning</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6b665d; border:1px solid #e2ddd4; padding:2px 6px">Robotics</span>
+          </div>
+        </div>
+
+      </div>
+      <p style="margin:26px 0 0; font-size:14.5px"><a href="/project-archive.html">Full project archive — hardware, vision, web and Android →</a></p>
+    </div>
+
+    <!-- TALKS -->
+    <div id="talks" style="padding-top:88px; scroll-margin-top:70px">
+      <div style="border-bottom:1px solid #e2ddd4; padding-bottom:12px; margin-bottom:32px">
+        <h2 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6b665d">Talks &amp; Organised Events</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; max-width:860px">
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 26px 30px">
+          <span style="position:absolute; left:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:oklch(0.44 0.08 205)"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">Aug 2026</div>
+          <h3 style="margin:5px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500; line-height:1.3; text-wrap:pretty">Seeing Through Nature's Distortions: The Evolution of Image Restoration from Physical Models to Multimodal AI</h3>
+          <div style="font-size:14px; color:#6b665d">Faculty Development Program, Electronics &amp; ICT Academy, NIT Patna</div>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 26px 30px">
+          <span style="position:absolute; left:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">Sep 2025</div>
+          <h3 style="margin:5px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500; line-height:1.3; text-wrap:pretty">Proof2Silicon: Prompt Repair for Verified Code and Hardware Generation via Reinforcement Learning</h3>
+          <div style="font-size:14px; color:#6b665d">SRC TechCON '25</div>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 26px 30px">
+          <span style="position:absolute; left:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">Feb 2025</div>
+          <h3 style="margin:5px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500; line-height:1.3; text-wrap:pretty">Dafny Dynamo: Empowering Large Language Models for Verified Code Generation</h3>
+          <div style="font-size:14px; color:#6b665d">Invited speaker, ECE 584, UIUC</div>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 26px 30px">
+          <span style="position:absolute; left:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">Mar 2022</div>
+          <h3 style="margin:5px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500; line-height:1.3; text-wrap:pretty">A Quick Walk Through of Angular 13</h3>
+          <div style="font-size:14px; color:#6b665d">Invited speaker, Geekle Angular Global Summit — 1,000+ participants</div>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 26px 30px">
+          <span style="position:absolute; left:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">Jun 2021</div>
+          <h3 style="margin:5px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500; line-height:1.3; text-wrap:pretty">Guide to GitHub 102</h3>
+          <div style="font-size:14px; color:#6b665d">Speaker and organiser, as Microsoft Learn Student Ambassador</div>
+        </div>
+
+        <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 26px 30px">
+          <span style="position:absolute; left:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">Jun 2021</div>
+          <h3 style="margin:5px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500; line-height:1.3; text-wrap:pretty">TinkerCAD &amp; GitHub</h3>
+          <div style="font-size:14px; color:#6b665d">Invited guest speaker, annual tech-fest of GEC Banka</div>
+        </div>
+
+        <details class="previous-talks">
+          <summary><span class="when-closed">See previous talks</span><span class="when-open">Show fewer</span></summary>
+
+          <div style="display:flex; flex-direction:column">
+
+            <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 26px 30px">
+              <span style="position:absolute; left:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">Jan 2021</div>
+              <h3 style="margin:5px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500; line-height:1.3; text-wrap:pretty">HackNITP</h3>
+              <div style="font-size:14px; color:#6b665d">Organiser and event manager, national college hackathon</div>
+            </div>
+
+            <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 26px 30px">
+              <span style="position:absolute; left:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">Jan 2021</div>
+              <h3 style="margin:5px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500; line-height:1.3; text-wrap:pretty">Quantum Computing: Introduction to the Realm of Particles</h3>
+              <div style="font-size:14px; color:#6b665d">Speaker, as Microsoft Learn Student Ambassador</div>
+            </div>
+
+            <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 26px 30px">
+              <span style="position:absolute; left:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">Oct 2020</div>
+              <h3 style="margin:5px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500; line-height:1.3; text-wrap:pretty">Open Source Revealed</h3>
+              <div style="font-size:14px; color:#6b665d">Invited speaker, Hackslash Developer Club, NIT Patna</div>
+            </div>
+
+            <div style="position:relative; border-left:1px solid #d6d0c6; padding:0 0 26px 30px">
+              <span style="position:absolute; left:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:#faf8f5; border:1.5px solid #a8a29a; box-sizing:border-box"></span>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">Sep 2020</div>
+              <h3 style="margin:5px 0 3px; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500; line-height:1.3; text-wrap:pretty">Guide to GitHub 101</h3>
+              <div style="font-size:14px; color:#6b665d">Speaker and organiser, as Microsoft Learn Student Ambassador</div>
+            </div>
+
+          </div>
+
+        </details>
+
+      </div>
+      <p style="margin:26px 0 0; font-size:14.5px"><a href="/lectures-and-press.html">Video lectures, writing and press →</a></p>
+    </div>
+
+    <!-- AWARDS + SERVICE -->
+    <div class="responsive-grid" id="awards" style="padding-top:88px; scroll-margin-top:70px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:52px">
+
+      <div>
+        <div style="border-bottom:1px solid #e2ddd4; padding-bottom:12px; margin-bottom:24px">
+          <h2 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6b665d">Awards</h2>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px">
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Yi-Min Wang and Pi-Yu Chung Research Award</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:oklch(0.44 0.08 205)">2026</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Joan and Lalit Bahl Fellowship</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2025—26</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Emerging Contributor Award, DAC</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2025</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">DAC Young Fellow</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2025, 2026</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Tech-Talks on IoT, 1st place — IEEE BIT Mesra national contest</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">—</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Hacksagon, 8th of 400+ teams — team leader</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2020</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">International Mathematics Olympiad — Gold Medal</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">—</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="border-bottom:1px solid #e2ddd4; padding-bottom:12px; margin-bottom:24px">
+          <h2 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6b665d">Service &amp; Leadership</h2>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px">
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Reviewer, IEEE ISCAS</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2025</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Reviewer, IEEE Trans. Neural Networks and Learning Systems</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2022</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Executive Committee, IEEE SB NIT Patna</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2021—22</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Open-source contributor, Microsoft IoT for Beginners</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2021</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Beta Microsoft Learn Student Ambassador</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2020—23</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Hardware Team Lead, GDSC NIT Patna</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2020—21</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Website Developer, TEDx NIT Patna</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2021</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty"><a href="https://www.youtube.com/@techwatch4844" target="_blank" rel="noreferrer">TechWatch</a> — technology education channel</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2020—</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Web Manager, AITA 2021 international conference</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2021</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Event Manager, HackNITP national hackathon</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2021</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Website Developer, NIT Patna official web team</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2019—20</span></div>
+          <div class="responsive-grid" style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline"><span style="font-size:15.5px; color:#17161a; text-wrap:pretty">Student Coordinator, Alumni Cell NIT Patna</span><span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6b665d">2020—22</span></div>
+          <p style="margin:8px 0 0; font-size:14px"><a href="/certificates.html">Certificates for these roles →</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SKILLS -->
+    <div style="padding-top:88px">
+      <div style="border-bottom:1px solid #e2ddd4; padding-bottom:12px; margin-bottom:28px">
+        <h2 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6b665d">Technical Skills</h2>
+      </div>
+      <div class="responsive-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:28px">
+        <div style="display:flex; flex-direction:column; gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.07em; text-transform:uppercase; color:#8a857c">Languages</div>
+          <div style="font-size:15px; color:#3d3a34; line-height:1.65">Python · C/C++ · Bash/Zsh · SQL (MySQL) · MATLAB · Verilog</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.07em; text-transform:uppercase; color:#8a857c">RL &amp; Theory</div>
+          <div style="font-size:15px; color:#3d3a34; line-height:1.65">Reinforcement learning · MDPs · Optimization · Statistics for ML</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.07em; text-transform:uppercase; color:#8a857c">ML &amp; GenAI</div>
+          <div style="font-size:15px; color:#3d3a34; line-height:1.65">Transformers · ViT · RAG · Pretraining &amp; fine-tuning · Prompt refinement · Speculative decoding</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.07em; text-transform:uppercase; color:#8a857c">Systems &amp; Tooling</div>
+          <div style="font-size:15px; color:#3d3a34; line-height:1.65">Dafny · Vivado &amp; HLS · ROS · ReactJS · AngularJS · Git/GitHub · Jira</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div style="border-top:1px solid #e2ddd4; background:#f4f1ec">
+    <div class="page-container" style="max-width:1080px; margin:0 auto; padding:36px 28px; box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b665d; line-height:1.7">Manvi Jha · ECE, University of Illinois Urbana-Champaign<br>403 Coordinated Science Lab, Urbana, IL 61801</div>
+      <div style="display:flex; gap:18px; font-family:'IBM Plex Mono',monospace; font-size:12px; flex-wrap:wrap">
+        <a href="mailto:manvij2@illinois.edu">Email</a>
+        <a href="https://scholar.google.com/citations?user=QxhKiigAAAAJ" target="_blank" rel="noreferrer">Scholar</a>
+        <a href="https://github.com/Severus-Matthew" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/manvi-jha-2784711a7/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="/uploads/cv.pdf" target="_blank" rel="noreferrer">CV</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
