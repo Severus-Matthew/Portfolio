@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #f6f5f3; color: #17161a; -webkit-font-smoothing: antialiased; }
+  a { color: oklch(0.52 0.13 255); }
+  a:hover { color: oklch(0.42 0.14 255); }
+  .rc a { color: #0d0d0f; }
+</style>
+</helmet>
+
+<div style="font-family:'Libre Franklin',Helvetica,sans-serif; max-width:1180px; margin:0 auto; padding:56px 28px 96px; box-sizing:border-box">
+
+  <div style="display:flex; flex-direction:column; gap:14px; padding-bottom:28px; border-bottom:1px solid #dcd9d4">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.04em; color:#6f6b64; display:flex; flex-wrap:wrap; gap:8px">
+      <span>Severus-Matthew/protfolio</span><span style="color:#c3bfb8">/</span><span>backup/pre-academic-redesign-2026-08-05</span><span style="color:#c3bfb8">/</span><span>60af499</span>
+    </div>
+    <h1 style="margin:0; font-size:38px; font-weight:600; letter-spacing:-0.02em; line-height:1.15; text-wrap:pretty">Visual review of the pre-redesign site</h1>
+    <p style="margin:0; max-width:62ch; font-size:16px; line-height:1.6; color:#494540; text-wrap:pretty">Read from source: the CRA app renders eight routes over one shared stylesheet (<span style="font-family:'JetBrains Mono',monospace; font-size:13px">src/style.css</span>). Below, the pages are re-rendered from that CSS so you can see them without running the build, followed by what I would change.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; padding-top:4px">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; padding:5px 9px; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; color:#494540">React 16.8 / CRA</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; padding:5px 9px; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; color:#494540">Bootstrap 4.6</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; padding:5px 9px; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; color:#494540">8 routes</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; padding:5px 9px; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; color:#494540">1 stylesheet, 15KB</span>
+    </div>
+  </div>
+
+  <!-- ============ RECREATIONS ============ -->
+  <h2 style="margin:52px 0 6px; font-size:13px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8a857d">Pages as they render</h2>
+  <p style="margin:0 0 24px; font-size:14px; line-height:1.6; color:#6f6b64">Rebuilt from <span style="font-family:'JetBrains Mono',monospace; font-size:13px">style.css</span> and the route components. Numbered markers point to the findings below.</p>
+
+  <!-- HOME -->
+  <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:36px">
+    <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#17161a">/</span>
+      <span style="font-size:14px; font-weight:600">Home</span>
+      <span style="font-size:13px; color:#8a857d">Home.js → Home2.js</span>
+    </div>
+    <div class="rc" style="border:1px solid #dcd9d4; border-radius:5px; overflow:hidden; background:linear-gradient(to left, rgb(255,255,255), rgb(97,97,99)); font-family:'Raleway',sans-serif; font-weight:500">
+      <div style="background:#666767; padding:0.4rem 1.2rem; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; box-shadow:0 10px 10px rgba(42,42,43,0.17)">
+        <img src="src/Assets/logo.png" alt="brand" style="height:22px; width:auto" />
+        <div style="display:flex; gap:20px; flex-wrap:wrap; font-size:13px; color:#010101">
+          <span>⌂ Home</span><span>Publications</span><span>Experiences</span><span>Skills</span><span>Projects</span><span>Courses</span><span>Blogs &amp; Lectures</span><span>CV</span>
+        </div>
+      </div>
+      <div style="position:relative; height:96px; border-bottom:1px dashed rgba(0,0,0,0.18)">
+        <div style="position:absolute; left:14px; top:14px; display:flex; align-items:center; gap:8px">
+          <span style="width:20px; height:20px; border-radius:50%; background:oklch(0.52 0.13 255); color:#fff; font-size:11px; font-weight:700; display:grid; place-items:center; font-family:'Libre Franklin',sans-serif">3</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#1b1b1e">empty .home-content — 96px of nothing</span>
+        </div>
+      </div>
+      <div style="padding:24px 32px 32px; font-family:Georgia,'Times New Roman',serif">
+        <div style="display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:24px; align-items:start">
+          <div style="text-align:center; font-style:italic; color:rgb(10,10,10)">
+            <h1 style="margin:0; font-size:2.6em; font-style:normal">.<span style="color:#050505">ABOUT</span> ME.</h1>
+            <p style="text-align:left; font-size:1.2em; padding-left:10vh; line-height:1.55; margin:18px 0 0; text-wrap:pretty">Hello! I am <u style="color:#050505">Manvi Jha</u>, a passionate Ph.D. student at the <u style="color:#050505">Electrical and Computer Engineering (ECE)</u> department of the <u style="color:#050505">University of Illinois Urbana-Champaign (UIUC)</u>. Currently, I am engaged as a <u style="color:#050505">Research Assistant</u> at the Circuits Lab, where my work spans the exciting realms of <u style="color:#050505">Deep Learning, Computer Vision, Large-language Models, HLS, and Hardware code Generation and Verification</u>.
+            <br /><br />My research journey involves delving into cutting-edge technologies to develop real-world solutions for a diverse array of research problems.</p>
+            <div style="display:flex; align-items:center; gap:8px; padding-left:10vh; margin-top:12px; font-style:normal">
+              <span style="width:20px; height:20px; border-radius:50%; background:oklch(0.52 0.13 255); color:#fff; font-size:11px; font-weight:700; display:grid; place-items:center; font-family:'Libre Franklin',sans-serif">1</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11px">.purple = #050505 · every highlight reads as body text</span>
+              <span style="width:20px; height:20px; border-radius:50%; background:oklch(0.52 0.13 255); color:#fff; font-size:11px; font-weight:700; display:grid; place-items:center; font-family:'Libre Franklin',sans-serif">5</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11px">indent is 10vh</span>
+            </div>
+          </div>
+          <div style="text-align:center">
+            <img src="src/Assets/me2.png" alt="portrait" style="max-width:100%; height:auto; display:block; margin:0 auto" />
+            <p style="font-size:1.05em; line-height:1.5; margin:12px 0 0">403, Coordinated Science Lab,<br />1308 W Main St Urbana,<br />Illinois 61801</p>
+          </div>
+        </div>
+        <div style="text-align:center; padding-top:22px; color:#fff">
+          <p style="margin:0; font-size:1.6em"><span style="color:#050505">CONNECT </span>WITH ME</p>
+          <div style="display:flex; gap:26px; justify-content:center; padding-top:14px">
+            <span style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.97); color:#020202; display:grid; place-items:center; font-size:14px; font-family:'Libre Franklin',sans-serif">gh</span>
+            <span style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.97); color:#020202; display:grid; place-items:center; font-size:14px; font-family:'Libre Franklin',sans-serif">in</span>
+            <span style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.97); color:#020202; display:grid; place-items:center; font-size:14px; font-family:'Libre Franklin',sans-serif">✉</span>
+            <span style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.97); color:#020202; display:grid; place-items:center; font-size:14px; font-family:'Libre Franklin',sans-serif">gs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:36px">
+    <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#17161a">/Publications</span>
+      <span style="font-size:13px; color:#8a857d">Publications.js — 12 entries</span>
+    </div>
+    <div class="rc" style="border:1px solid #dcd9d4; border-radius:5px; overflow:hidden; background:linear-gradient(to left, rgb(137,137,138), rgb(182,182,186)); padding:36px 32px; font-family:Georgia,'Times New Roman',serif">
+      <h1 style="margin:0; color:#fff; font-size:2.3em">.<strong style="color:#050505">Publications</strong>.</h1>
+      <div style="display:flex; align-items:center; gap:8px; margin:10px 0 18px">
+        <span style="width:20px; height:20px; border-radius:50%; background:oklch(0.52 0.13 255); color:#fff; font-size:11px; font-weight:700; display:grid; place-items:center; font-family:'Libre Franklin',sans-serif">2</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#1b1b1e">white on light grey ≈ 2.1:1</span>
+      </div>
+      <h3 style="margin:0 0 14px; color:#fff; font-size:1.4em">.<strong>Published</strong>.</h3>
+      <div style="display:flex; flex-direction:column; gap:14px; max-width:83%; margin:0 auto">
+        <div style="border:1px solid #fff; box-shadow:2px 3px 2px 1px #eae6eb; opacity:0.9; padding:16px 18px; color:rgb(31,28,30)">
+          <div style="color:#050505; font-weight:700; line-height:1.35; text-wrap:pretty">An Iteratively-refined Dataset for High-Level Synthesis Functional Verification through LLM-Aided Bug Injection. <span style="color:#fff; font-weight:400"><i>2024 IEEE LLM Aided Design Workshop (LAD).</i></span></div>
+          <div style="text-align:center; margin-top:10px; font-size:0.95em">Jiaxin Wan, Hanchen Ye, Jinghua Wang, <b>Manvi Jha</b>, Deming Chen (2024)</div>
+        </div>
+        <div style="border:1px solid #fff; box-shadow:2px 3px 2px 1px #eae6eb; opacity:0.9; padding:16px 18px; color:rgb(31,28,30)">
+          <div style="color:#050505; font-weight:700; line-height:1.35; text-wrap:pretty">CBLA: Color Balanced Locally Adjustable Underwater Image Enhancement. <span style="color:#fff; font-weight:400"><i>IEEE Transactions on Instrumentation and Measurements.</i></span></div>
+          <div style="text-align:center; margin-top:10px; font-size:0.95em"><b>Manvi Jha</b>, Ashsish Kumar Bhandari, (2024) <a href="https://ieeexplore.ieee.org/document/9750136">Link</a></div>
+        </div>
+        <div style="border:1px solid #fff; box-shadow:2px 3px 2px 1px #eae6eb; opacity:0.9; padding:16px 18px; color:rgb(31,28,30)">
+          <div style="color:#050505; font-weight:700; line-height:1.35; text-wrap:pretty">NSDIE: Noise Suppressing Dark Image Enhancement Using Multiscale Retinex and Low-Rank Minimization. <span style="color:#fff; font-weight:400"><i>ACM Transactions on Multimedia Computing, Communications and Applications.</i></span></div>
+          <div style="text-align:center; margin-top:10px; font-size:0.95em"><b>Manvi Jha</b>, Ashsish Kumar Bhandari, (2024) <a href="https://ieeexplore.ieee.org/document/9750136">Link</a></div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; max-width:83%; margin:14px auto 0">
+        <span style="width:20px; height:20px; border-radius:50%; background:oklch(0.52 0.13 255); color:#fff; font-size:11px; font-weight:700; display:grid; place-items:center; font-family:'Libre Franklin',sans-serif">6</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#1b1b1e">five entries share one DOI · "Ashsish" ×5 · venue/year disagree</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COURSES -->
+  <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:36px">
+    <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#17161a">/about</span>
+      <span style="font-size:13px; color:#8a857d">About.js — nav label reads "Courses"</span>
+    </div>
+    <div class="rc" style="border:1px solid #dcd9d4; border-radius:5px; overflow:hidden; background:linear-gradient(to left, rgb(137,137,138), rgb(182,182,186)); padding:36px 32px; font-family:Georgia,'Times New Roman',serif">
+      <h1 style="margin:0 0 20px; color:#fff; font-size:2.3em">.Courses <strong style="color:#050505">Completed</strong> By Me.</h1>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px">
+        <div style="border:1px solid #fff; box-shadow:2px 3px 2px 1px #eae6eb; opacity:0.9; padding:16px; color:rgb(31,28,30); display:flex; flex-direction:column; gap:10px">
+          <div style="color:#050505; font-size:1.15em">Neural Networks and Deep Learning</div>
+          <div style="text-align:justify; font-size:0.95em; line-height:1.5">Course offered on Coursera by Deeplearning.AI. Passed with 100% score. Course Duration - 4 weeks</div>
+          <span style="align-self:flex-start; background:#4c4d4e; border:1px solid #2f2f30; color:#fff; padding:6px 12px; font-size:0.9em; font-family:'Raleway',sans-serif">↗ View Course Certificate</span>
+        </div>
+        <div style="border:1px solid #fff; box-shadow:2px 3px 2px 1px #eae6eb; opacity:0.9; padding:16px; color:rgb(31,28,30); display:flex; flex-direction:column; gap:10px">
+          <div style="color:#050505; font-size:1.15em">Blockchain Basics</div>
+          <div style="text-align:justify; font-size:0.95em; line-height:1.5">Course offered on Coursera by University at Buffalo, The State University of New York. Passed with 100% score. Course Duration - 4 weeks</div>
+          <span style="align-self:flex-start; background:#4c4d4e; border:1px solid #2f2f30; color:#fff; padding:6px 12px; font-size:0.9em; font-family:'Raleway',sans-serif">↗ View Course Certificate</span>
+        </div>
+        <div style="border:1px solid #fff; box-shadow:2px 3px 2px 1px #eae6eb; opacity:0.9; padding:16px; color:rgb(31,28,30); display:flex; flex-direction:column; gap:10px">
+          <div style="color:#050505; font-size:1.15em">Machine Learning</div>
+          <div style="text-align:justify; font-size:0.95em; line-height:1.5">Course offered on Coursera by Stanford University. Passed with 99.2% score. Course Duration - 11 weeks</div>
+          <span style="align-self:flex-start; background:#4c4d4e; border:1px solid #2f2f30; color:#fff; padding:6px 12px; font-size:0.9em; font-family:'Raleway',sans-serif">↗ View Course Certificate</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; margin-top:14px">
+        <span style="width:20px; height:20px; border-radius:50%; background:oklch(0.52 0.13 255); color:#fff; font-size:11px; font-weight:700; display:grid; place-items:center; font-family:'Libre Franklin',sans-serif">4</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#1b1b1e">13 flat cards, no grouping or dates — the page has no shape</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:8px">
+    <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#17161a">Footer.js</span>
+      <span style="font-size:13px; color:#8a857d">on every route</span>
+    </div>
+    <div class="rc" style="border:1px solid #dcd9d4; border-radius:5px; overflow:hidden; background:#666767; padding:14px 32px; font-family:'Raleway',sans-serif">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; align-items:center; text-align:center; color:#fff">
+        <h3 style="margin:0; font-size:1em; font-weight:500">Website about Manvi Jha</h3>
+        <span></span>
+        <span style="font-size:0.95em; font-weight:700">In The News</span>
+        <div style="display:flex; gap:22px; justify-content:center; font-size:0.95em"><span>gh</span><span>in</span><span>✉</span></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; margin-top:12px">
+        <span style="width:20px; height:20px; border-radius:50%; background:oklch(0.52 0.13 255); color:#fff; font-size:11px; font-weight:700; display:grid; place-items:center">7</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#f2f2f2">mail link has no mailto: · one of four columns is empty</span>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin:18px 0 0; font-size:13px; line-height:1.6; color:#8a857d; text-wrap:pretty">Not rendered here: <span style="font-family:'JetBrains Mono',monospace; font-size:12px">/experience</span>, <span style="font-family:'JetBrains Mono',monospace; font-size:12px">/project</span>, <span style="font-family:'JetBrains Mono',monospace; font-size:12px">/Blogs</span>, <span style="font-family:'JetBrains Mono',monospace; font-size:12px">/Skills</span> and <span style="font-family:'JetBrains Mono',monospace; font-size:12px">/resume</span> — they reuse the same grey section and card, so the findings below apply to them unchanged.</p>
+
+  <!-- ============ FINDINGS ============ -->
+  <h2 style="margin:56px 0 6px; font-size:13px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8a857d">What I would change</h2>
+  <p style="margin:0 0 26px; font-size:14px; line-height:1.6; color:#6f6b64">Ordered by how much each one costs a visitor.</p>
+
+  <div style="display:flex; flex-direction:column; gap:2px">
+
+    <div style="display:grid; grid-template-columns:34px minmax(0,1fr) 96px; gap:18px; align-items:start; padding:20px 0; border-top:1px solid #dcd9d4">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8a857d; padding-top:2px">01</span>
+      <div style="display:flex; flex-direction:column; gap:7px">
+        <h3 style="margin:0; font-size:17px; font-weight:600; letter-spacing:-0.01em">The emphasis colour is black</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#494540; text-wrap:pretty">Every highlighted term uses <span style="font-family:'JetBrains Mono',monospace; font-size:13px">.purple</span>, which resolves to <span style="font-family:'JetBrains Mono',monospace; font-size:13px">--imp-text-color: #050505</span> with <span style="font-family:'JetBrains Mono',monospace; font-size:13px">!important</span>. Card titles that set <span style="font-family:'JetBrains Mono',monospace; font-size:13px">color:"purple"</span> inline are overridden too. The hierarchy the markup describes never reaches the screen. Pick one real accent and let the class mean it.</p>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#494540; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; padding:4px 7px; justify-self:start">1 line</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns:34px minmax(0,1fr) 96px; gap:18px; align-items:start; padding:20px 0; border-top:1px solid #dcd9d4">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8a857d; padding-top:2px">02</span>
+      <div style="display:flex; flex-direction:column; gap:7px">
+        <h3 style="margin:0; font-size:17px; font-weight:600; letter-spacing:-0.01em">White text on light grey fails contrast</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#494540; text-wrap:pretty">Every inner page sits on <span style="font-family:'JetBrains Mono',monospace; font-size:13px">--section-background-color</span> (rgb 137→182) with <span style="font-family:'JetBrains Mono',monospace; font-size:13px">color: white !important</span> — roughly 2.1:1, against a 4.5:1 requirement. Publication cards make it worse by putting white venue names next to black titles inside the same sentence. Either darken the section or make the ink dark.</p>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#494540; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; padding:4px 7px; justify-self:start">2 vars</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns:34px minmax(0,1fr) 96px; gap:18px; align-items:start; padding:20px 0; border-top:1px solid #dcd9d4">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8a857d; padding-top:2px">03</span>
+      <div style="display:flex; flex-direction:column; gap:7px">
+        <h3 style="margin:0; font-size:17px; font-weight:600; letter-spacing:-0.01em">The homepage has no hero</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#494540; text-wrap:pretty"><span style="font-family:'JetBrains Mono',monospace; font-size:13px">Home.js</span> imports <span style="font-family:'JetBrains Mono',monospace; font-size:13px">me2.png</span>, <span style="font-family:'JetBrains Mono',monospace; font-size:13px">word.png</span> and the <span style="font-family:'JetBrains Mono',monospace; font-size:13px">Type</span> typewriter, then renders an empty container — so the first screen is a blank grey band and the page opens mid-biography. The styling for a hero already exists (<span style="font-family:'JetBrains Mono',monospace; font-size:13px">.heading</span>, <span style="font-family:'JetBrains Mono',monospace; font-size:13px">.Typewriter__wrapper</span>, <span style="font-family:'JetBrains Mono',monospace; font-size:13px">.wave</span>); nothing uses it. Also drop <span style="font-family:'JetBrains Mono',monospace; font-size:13px">z-index:-1</span> on <span style="font-family:'JetBrains Mono',monospace; font-size:13px">.home-section</span> — it pushes the hero behind the page background.</p>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#494540; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; padding:4px 7px; justify-self:start">1 file</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns:34px minmax(0,1fr) 96px; gap:18px; align-items:start; padding:20px 0; border-top:1px solid #dcd9d4">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8a857d; padding-top:2px">04</span>
+      <div style="display:flex; flex-direction:column; gap:7px">
+        <h3 style="margin:0; font-size:17px; font-weight:600; letter-spacing:-0.01em">Long pages are undifferentiated card walls</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#494540; text-wrap:pretty">Courses runs 13 identical cards, Publications 12, News 5 — all the same box, no dates, no venue grouping, no sort. For an academic site the list itself is the content, so it should read as a list: year on the left, title, venue, then one link. Cards add a border and a shadow and remove scannability.</p>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#494540; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; padding:4px 7px; justify-self:start">design</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns:34px minmax(0,1fr) 96px; gap:18px; align-items:start; padding:20px 0; border-top:1px solid #dcd9d4">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8a857d; padding-top:2px">05</span>
+      <div style="display:flex; flex-direction:column; gap:7px">
+        <h3 style="margin:0; font-size:17px; font-weight:600; letter-spacing:-0.01em">Typography has no system</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#494540; text-wrap:pretty">Raleway loads for the body, then Georgia is re-declared per component and per inline style, with heading sizes set ad hoc (2.6em, 2.3em, 2.5em) in JSX. Meanwhile <span style="font-family:'JetBrains Mono',monospace; font-size:13px">.home-about-body</span> indents by <span style="font-family:'JetBrains Mono',monospace; font-size:13px">padding-left:10vh</span>, so the text inset changes when you resize the window vertically. Three sizes, one pairing, defined once.</p>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#494540; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; padding:4px 7px; justify-self:start">CSS</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns:34px minmax(0,1fr) 96px; gap:18px; align-items:start; padding:20px 0; border-top:1px solid #dcd9d4">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8a857d; padding-top:2px">06</span>
+      <div style="display:flex; flex-direction:column; gap:7px">
+        <h3 style="margin:0; font-size:17px; font-weight:600; letter-spacing:-0.01em">Publication metadata needs a pass</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#494540; text-wrap:pretty">Five different papers link to the same DOI (<span style="font-family:'JetBrains Mono',monospace; font-size:13px">ieeexplore/9750136</span>); the DAC entry is titled "2023 61st" but dated 2024; "Ashsish" appears five times; and the two Google Scholar links point at different user IDs (<span style="font-family:'JetBrains Mono',monospace; font-size:13px">QxhKiig…</span> on Home, <span style="font-family:'JetBrains Mono',monospace; font-size:13px">pV4Hl-o…</span> on Publications). This is the page reviewers actually read.</p>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#494540; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; padding:4px 7px; justify-self:start">content</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns:34px minmax(0,1fr) 96px; gap:18px; align-items:start; padding:20px 0; border-top:1px solid #dcd9d4">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8a857d; padding-top:2px">07</span>
+      <div style="display:flex; flex-direction:column; gap:7px">
+        <h3 style="margin:0; font-size:17px; font-weight:600; letter-spacing:-0.01em">Small breakages worth clearing</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#494540; text-wrap:pretty">The footer mail link is <span style="font-family:'JetBrains Mono',monospace; font-size:13px">href="drprofmjha@gmail.com"</span> with no <span style="font-family:'JetBrains Mono',monospace; font-size:13px">mailto:</span>, so it navigates to a relative path; one of its four columns is empty commented-out markup. <span style="font-family:'JetBrains Mono',monospace; font-size:13px">Navbar.js</span> attaches a scroll listener in the render body, adding one on every render and never removing it. <span style="font-family:'JetBrains Mono',monospace; font-size:13px">ResumeNew.js</span> mounts the same PDF three times as three separate documents at 1.7× with no loading state. Routes mix cases (<span style="font-family:'JetBrains Mono',monospace; font-size:13px">/Publications</span>, <span style="font-family:'JetBrains Mono',monospace; font-size:13px">/Skills</span>, <span style="font-family:'JetBrains Mono',monospace; font-size:13px">/project</span>), and "Courses" in the nav points to <span style="font-family:'JetBrains Mono',monospace; font-size:13px">/about</span>.</p>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#494540; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; padding:4px 7px; justify-self:start">4 files</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns:34px minmax(0,1fr) 96px; gap:18px; align-items:start; padding:20px 0; border-top:1px solid #dcd9d4; border-bottom:1px solid #dcd9d4">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8a857d; padding-top:2px">08</span>
+      <div style="display:flex; flex-direction:column; gap:7px">
+        <h3 style="margin:0; font-size:17px; font-weight:600; letter-spacing:-0.01em">Eight nav items, no priority</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#494540; text-wrap:pretty">Home, Publications, Experiences, Skills, Projects, Courses, Blogs &amp; Lectures, CV all carry equal weight and collapse to a burger below 768px. For a research site, Publications, Experience and CV are the destinations; Courses, Skills and Blogs can live one level down. There is also no active-page state — <span style="font-family:'JetBrains Mono',monospace; font-size:13px">defaultActiveKey="#home"</span> never updates.</p>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#494540; background:#eceae6; border:1px solid #dcd9d4; border-radius:3px; padding:4px 7px; justify-self:start">IA</span>
+    </div>
+
+  </div>
+
+  <p style="margin:34px 0 0; font-size:14.5px; line-height:1.65; color:#494540; max-width:62ch; text-wrap:pretty">If you want, I can take the two that change the most for the least work — the accent colour and the section contrast — and show them side by side against this, or mock the publications list as a real list.</p>
+
+</div>
+
+</x-dc>
+</body>
+</html>
