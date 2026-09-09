@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<meta charset="utf-8" />
+<title>Lectures, writing & press — Manvi Jha</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -16,29 +11,29 @@
   a { color: oklch(0.44 0.08 205); text-underline-offset: 2px; }
   a:hover { color: oklch(0.33 0.07 205); }
 </style>
-</helmet>
-
+</head>
+<body>
 <div style="font-family:'IBM Plex Sans',Helvetica,sans-serif; font-size:16px; line-height:1.6">
 
   <div style="position:sticky; top:0; z-index:50; background:rgba(250,248,245,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #e2ddd4">
-    <div style="max-width:1080px; margin:0 auto; padding:12px 28px; box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap">
-      <a href="Academic Portfolio.dc.html" style="font-family:'Newsreader',Georgia,serif; font-size:19px; font-weight:500; color:#17161a; text-decoration:none">Manvi Jha</a>
-      <a href="Academic Portfolio.dc.html" style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; text-decoration:none">← Back to main page</a>
+    <div style="max-width:1080px; margin:0 auto; padding:12px clamp(16px,4vw,28px); box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap">
+      <a href="index.html" style="font-family:'Newsreader',Georgia,serif; font-size:19px; font-weight:500; color:#17161a; text-decoration:none">Manvi Jha</a>
+      <a href="index.html" style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; text-decoration:none">← Back to main page</a>
     </div>
   </div>
 
-  <div style="max-width:1080px; margin:0 auto; padding:64px 28px 110px; box-sizing:border-box">
+  <div style="max-width:1080px; margin:0 auto; padding:64px clamp(16px,4vw,28px) 110px; box-sizing:border-box">
 
     <div style="display:flex; flex-direction:column; gap:16px; padding-bottom:44px">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:oklch(0.44 0.08 205)">Archive</div>
-      <h1 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:44px; font-weight:400; line-height:1.1; letter-spacing:-0.02em">Lectures, writing &amp; press</h1>
-      <p style="margin:0; max-width:60ch; font-size:16.5px; line-height:1.6; color:#3d3a34; text-wrap:pretty">Recorded teaching sessions, blog writing, and coverage of the work elsewhere. Invited talks are on the <a href="Academic Portfolio.dc.html#talks">main page</a>.</p>
+      <h1 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:clamp(30px,6.5vw,44px); font-weight:400; line-height:1.1; letter-spacing:-0.02em">Lectures, writing &amp; press</h1>
+      <p style="margin:0; max-width:60ch; font-size:16.5px; line-height:1.6; color:#3d3a34; text-wrap:pretty">Recorded teaching sessions, blog writing, and coverage of the work elsewhere. Invited talks are on the <a href="index.html#talks">main page</a>.</p>
     </div>
 
     <div style="border-bottom:1px solid #e2ddd4; padding-bottom:12px; margin-bottom:24px">
       <h2 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:13px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6b665d">Video Lectures</h2>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1px; background:#e8e3da; border:1px solid #e8e3da; margin-bottom:56px">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:1px; background:#e8e3da; border:1px solid #e8e3da; margin-bottom:56px">
       <div style="background:#faf8f5; padding:24px; display:flex; flex-direction:column; gap:9px">
         <h3 style="margin:0; font-family:'Newsreader',Georgia,serif; font-size:20px; font-weight:500">Guide to GitHub 101</h3>
         <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a463f">Version control from zero, delivered as a Microsoft Learn Student Ambassador session.</p>
@@ -125,11 +120,10 @@
       </div>
     </div>
 
-    <p style="margin:44px 0 0; font-size:14.5px; color:#6b665d"><a href="Academic Portfolio.dc.html">← Back to main page</a></p>
+    <p style="margin:44px 0 0; font-size:14.5px; color:#6b665d"><a href="index.html">← Back to main page</a></p>
 
   </div>
 </div>
 
-</x-dc>
 </body>
 </html>
